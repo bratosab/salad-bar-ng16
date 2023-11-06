@@ -1,0 +1,12 @@
+<form [formGroup]="nameForm" (ngSubmit)="buildSalad()">
+  <mat-form-field>
+    <input matInput type="text" formControlName="name" />
+    <mat-error>Enter Your name</mat-error>
+  </mat-form-field>
+
+  <p>
+    <button mat-raised-button type="submit" color="primary">
+      Start building my salad
+    </button>
+  </p>
+</form>
