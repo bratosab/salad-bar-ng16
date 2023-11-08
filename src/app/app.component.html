@@ -13,10 +13,12 @@
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with share icon"
+    (click)="({})"
   >
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
+<ng-container *ngIf="logChangeDetection()"></ng-container>
 
 <p *ngIf="orderId$ | async as orderId">Order ID : {{ orderId }}</p>
 

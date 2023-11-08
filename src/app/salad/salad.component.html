@@ -1,1 +1,23 @@
-<p>salad works!</p>
+<div class="content">
+  <div class="column">
+    <div *ngIf="toppingsLoading$ | async">Loading ingredients...</div>
+    <app-toppings
+      *ngIf="toppings$ | async as toppings"
+      [toppings]="toppings"
+      (choose)="chooseTopping($event)"
+    ></app-toppings>
+  </div>
+  <div class="column">
+    <h2>Your order :</h2>
+    <h3>
+      Total price :
+      {{ totalPrice$ | async | currency : "€" }}
+    </h3>
+    <ul>
+      <li *ngFor="let topping of chosenToppings$ | async">
+        {{ topping.name }} - {{ topping.price | currency : "€" }}
+      </li>
+    </ul>
+  </div>
+  <ng-container *ngIf="logChangeDetection()"></ng-container>
+</div>

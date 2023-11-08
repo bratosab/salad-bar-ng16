@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { saladReducer } from './store/salad.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { SaladEffects } from './store/salad.effects';
+import { SharedMaterialModule } from '../shared-material/shared-material.module';
 
 
 
@@ -19,7 +20,8 @@ import { SaladEffects } from './store/salad.effects';
     CommonModule,
     SaladRoutingModule,
     StoreModule.forFeature('salad', saladReducer),
-    EffectsModule.forFeature([SaladEffects])
+    EffectsModule.forFeature([SaladEffects]),
+    SharedMaterialModule
   ]
 })
 export class SaladModule { }
