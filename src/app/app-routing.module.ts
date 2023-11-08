@@ -11,6 +11,7 @@ const routes: Routes = [
         (m) => m.KitchenRoutingModule
       ),
   },
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
