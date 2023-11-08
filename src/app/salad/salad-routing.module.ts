@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, Routes } from '@angular/router';
-import { SaladComponent } from './salad/salad.component';
+import { SaladComponent } from './salad.component';
 
 const routes: Routes = [
   { path: 'salad', component: SaladComponent }

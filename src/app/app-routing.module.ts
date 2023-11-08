@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NameFormComponent } from './name-form/name-form.component';
+import { NameFormComponent } from './components/name-form/name-form.component';
 
 const routes: Routes = [
   { path: '', component: NameFormComponent},
